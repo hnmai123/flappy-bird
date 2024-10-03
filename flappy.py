@@ -44,9 +44,11 @@ def check_collision(pipes):
     for pipe in pipes:
         if bird_rect.colliderect(pipe):
             hit_sound.play()
+            print('HIT')
             return False
     if bird_rect.top <= -50 or bird_rect.bottom >= 800:
         hit_sound.play()
+        print('HIT')
         return False
     return True
 
@@ -54,6 +56,7 @@ def check_collision_rocket(rockets):
     for rocket in rockets:
         if bird_rect.colliderect(rocket):
             hit_sound.play()
+            print('HIT')
             return False
     return True
 
@@ -141,7 +144,7 @@ score_sound = pygame.mixer.Sound('sound/sfx_point.wav')
 wait_sound = pygame.mixer.Sound('sound/nhaccho.wav')
 
 my_font = pygame.font.Font('04B_19.TTF', 40)
-FPS = 90
+FPS = 120
 gravity = 0.25
 bird_movement = 0
 game_active = False
