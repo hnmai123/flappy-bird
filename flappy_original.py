@@ -133,7 +133,7 @@ spawn_boom = pygame.USEREVENT + 3
 
 pygame.time.set_timer(bird_flap, 200)
 pygame.time.set_timer(spawn_pipe, 1200)
-pygame.time.set_timer(spawn_rocket, random.randint(1000, 3000))
+# pygame.time.set_timer(spawn_rocket, random.randint(1000, 3000))
 
 pipes = []
 rockets = []
